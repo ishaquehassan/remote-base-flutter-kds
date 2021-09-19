@@ -1,3 +1,3 @@
-# KDS App - Remotebase Hackfest
+# KDSP App - Remotebase Hackfest
 
 KDS app for appointment booking & general inquiries 
