@@ -1,4 +1,4 @@
-import 'package:flutter_starter_app/src/models/user.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:stacked/stacked.dart';
 
 class AuthService with ReactiveServiceMixin {
@@ -7,6 +7,9 @@ class AuthService with ReactiveServiceMixin {
 
   AuthService() {
     listenToReactiveValues([_user]);
+    FirebaseAuth.instance.authStateChanges().listen((event) {
+      user = event;
+    });
   }
 
   set user(User? user) {

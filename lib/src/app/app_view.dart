@@ -15,6 +15,7 @@ class AppView extends StatelessWidget {
       onGenerateRoute: NavService.onGenerateRoute,
       navigatorKey: NavService.key,
       home: SplashView(),
+      theme: ThemeData(),
       builder: (context, child) {
         return Stack(
           children: [child!],
